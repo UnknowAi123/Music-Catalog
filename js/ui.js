@@ -86,40 +86,33 @@ function renderTabla(datos) {
 
   datos.forEach(row => {
 
-    // Si tienes columna "imagen", úsala. Si no, icono por defecto.
-    const imagen = row.imagen 
-      ? `<img src="${row.imagen}" style="width:60px;height:60px;border-radius:8px;object-fit:cover;">`
+    const img = COLUMNAS.imagen && row[COLUMNAS.imagen]
+      ? `<img src="${row[COLUMNAS.imagen]}" style="width:60px;height:60px;border-radius:8px;object-fit:cover;">`
       : `<i class="material-icons" style="font-size:48px;color:#3f51b5;">album</i>`;
 
     cont.innerHTML += `
       <div class="list-item" style="display:flex; gap:12px;">
 
-        <!-- Imagen o icono -->
-        <div>${imagen}</div>
+        <div>${img}</div>
 
-        <!-- Texto -->
         <div style="display:flex; flex-direction:column;">
 
-          <!-- Canción + duración -->
           <span style="font-weight:600; font-size:16px;">
-            ${row.titulo} 
-            ${row.duracion ? `<span style="color:#666;font-size:14px;">— ${row.duracion}</span>` : ""}
+            ${row[COLUMNAS.cancion] || ""}
+            ${COLUMNAS.duracion && row[COLUMNAS.duracion] ? `<span style="color:#666;font-size:14px;">— ${row[COLUMNAS.duracion]}</span>` : ""}
           </span>
 
-          <!-- Artista -->
           <span style="color:#444; font-size:14px;">
-            ${row.nombre}
+            ${row[COLUMNAS.artista] || ""}
           </span>
 
-          <!-- Álbum -->
-          ${row.album ? `
+          ${COLUMNAS.album && row[COLUMNAS.album] ? `
             <span style="color:#777; font-size:13px;">
-              ${row.album}
+              ${row[COLUMNAS.album]}
             </span>
           ` : ""}
         </div>
 
-        <!-- Flecha -->
         <i class="material-icons arrow">chevron_right</i>
       </div>
     `;

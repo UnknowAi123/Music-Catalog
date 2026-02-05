@@ -1,5 +1,5 @@
 .page-content {
-  padding: 6px 6px;
+  padding: 4px 4px;
 }
 
 .mdl-card {
@@ -46,7 +46,7 @@ body {
   align-items: center;
   background: #ffffff;
   border-radius: 14px;
-  padding: 6px 6px;
+  padding: 4px 6px;
   margin-bottom: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.12);
 }

@@ -29,8 +29,8 @@
 }
 
 .deck-cover {
-  width: 42px;              /* cover más pequeño */
-  height: 42px;
+  width: 48px;              /* cover más pequeño */
+  height: 48x;
   border-radius: 6px;
   object-fit: cover;
   background: #ddd;
@@ -50,14 +50,15 @@
 }
 
 .deck-title {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 480;
   color: #111;
   line-height: 1.1;
 }
 
 .deck-artist {
-  font-size: 13px;
+  font-size: 12px;
+  font-weight: 333;
   color: #333;
   line-height: 1.1;
 }

@@ -120,7 +120,8 @@ function renderTabla(datos) {
         <div class="spotify-center">
           <div class="spotify-title">
             ${row.song || ""}
-            ${row.duration ? `<span class="spotify-duration">• ${row.duration}</span>` : ""}
+            ${row.duration ? `<span class="spotify-duration">• ${convertirDuracion(row.duration)}</span>` : ""}
+
           </div>
 
           <div class="spotify-artist">

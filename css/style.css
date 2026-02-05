@@ -47,7 +47,7 @@ body {
   background: #ffffff;
   border-radius: 14px;
   padding: 4px 6px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.12);
 }
 
@@ -83,7 +83,7 @@ body {
 
 .spotify-title {
   font-size: 12x;
-  font-weight: 600;
+  font-weight: 300;
   color: #111;
 }
 

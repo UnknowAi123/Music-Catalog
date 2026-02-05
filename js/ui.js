@@ -138,7 +138,8 @@ function renderTabla(datos) {
           <div class="deck-title">${row.song || ""}</div>
           <div class="deck-artist">${row.artist || ""}</div>
           <div class="deck-album">
-            ${row.album || ""} ${row.year ? `• ${row.year}` : ""}
+           ${row.year ? `${row.year} | ` : ""}${row.album || ""}
+
           </div>
         </div>
 

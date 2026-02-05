@@ -85,16 +85,42 @@ function renderTabla(datos) {
   const cont = document.getElementById("contenido-principal");
 
   datos.forEach(row => {
-    let contenido = "";
-    for (const col in row) {
-      contenido += `<strong>${col}:</strong> ${row[col]}<br>`;
-    }
+
+    // Si tienes columna "imagen", úsala. Si no, icono por defecto.
+    const imagen = row.imagen 
+      ? `<img src="${row.imagen}" style="width:60px;height:60px;border-radius:8px;object-fit:cover;">`
+      : `<i class="material-icons" style="font-size:48px;color:#3f51b5;">album</i>`;
 
     cont.innerHTML += `
-      <div class="mdl-card mdl-shadow--2dp card-item">
-        <div class="mdl-card__supporting-text">
-          ${contenido}
+      <div class="list-item" style="display:flex; gap:12px;">
+
+        <!-- Imagen o icono -->
+        <div>${imagen}</div>
+
+        <!-- Texto -->
+        <div style="display:flex; flex-direction:column;">
+
+          <!-- Canción + duración -->
+          <span style="font-weight:600; font-size:16px;">
+            ${row.titulo} 
+            ${row.duracion ? `<span style="color:#666;font-size:14px;">— ${row.duracion}</span>` : ""}
+          </span>
+
+          <!-- Artista -->
+          <span style="color:#444; font-size:14px;">
+            ${row.nombre}
+          </span>
+
+          <!-- Álbum -->
+          ${row.album ? `
+            <span style="color:#777; font-size:13px;">
+              ${row.album}
+            </span>
+          ` : ""}
         </div>
+
+        <!-- Flecha -->
+        <i class="material-icons arrow">chevron_right</i>
       </div>
     `;
   });

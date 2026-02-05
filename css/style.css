@@ -5,10 +5,10 @@
   align-items: center;
   background: #ffffff;
   border-radius: 12px;
-  padding: 6px 10px;        /* controla espacio general */
+  padding: 6px 6px;        /* controla espacio general */
   margin-bottom: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.12);
-  gap: 10px;                /* espacio entre cover y texto */
+  gap: 6px;                /* espacio entre cover y texto */
 }
 
 /* Duration arriba a la DERECHA */
@@ -58,7 +58,7 @@
 
 .deck-artist {
   font-size: 12px;
-  font-weight: 333;
+  font-weight: 480;
   color: #333;
   line-height: 1.1;
 }

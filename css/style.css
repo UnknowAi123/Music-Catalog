@@ -23,7 +23,11 @@
 
 /* ZONA 1: cover */
 .card-left {
-  margin-right: 6px;       /* controla espacio entre cover y texto */
+  margin-right: 6px; /* controla espacio entre cover y texto */
+  display: flex;
+  align-items: center;
+}
+
 }
 
 .card-cover {

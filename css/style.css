@@ -1,5 +1,5 @@
 .page-content {
-  padding: 4px 4px;
+  padding: 2px 2px;
 }
 
 .mdl-card {
@@ -61,6 +61,10 @@ body {
   border-radius: 8px;
   object-fit: cover;
   background: #ddd;
+  margin-top: 2;
+  margin-bottom: 2;
+}
+
 }
 
 .spotify-cover.placeholder {

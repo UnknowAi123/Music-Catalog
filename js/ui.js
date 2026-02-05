@@ -17,7 +17,7 @@ function generarVistasIniciales() {
     `;
   }
 
-  // Vista principal: tabla completa
+  // Vista principal: tarjetas con todos los datos
   mostrarTablaCompleta();
 }
 
@@ -35,7 +35,7 @@ function mostrarVista(columna, tipo) {
 }
 
 function mostrarLista(columna) {
-  const datos = alasql(`SELECT ${columna} FROM musica`);
+  const datos = alasql(`SELECT [${columna}] AS valor FROM musica`);
   limpiarContenido();
 
   const cont = document.getElementById("contenido-principal");
@@ -44,21 +44,20 @@ function mostrarLista(columna) {
     cont.innerHTML += `
       <div class="list-item">
         <i class="material-icons">music_note</i>
-        <span>${item[columna]}</span>
+        <span>${item.valor}</span>
         <i class="material-icons arrow">chevron_right</i>
       </div>
     `;
   });
 }
 
-
 function mostrarStats(columna) {
   const stats = alasql(`
     SELECT 
       COUNT(*) AS total,
-      AVG(${columna}) AS promedio,
-      MIN(${columna}) AS minimo,
-      MAX(${columna}) AS maximo
+      AVG([${columna}]) AS promedio,
+      MIN([${columna}]) AS minimo,
+      MAX([${columna}]) AS maximo
     FROM musica
   `)[0];
 
@@ -100,39 +99,3 @@ function renderTabla(datos) {
     `;
   });
 }
-
-
-  const columnas = Object.keys(datos[0]);
-
-  let html = `
-    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
-      <thead>
-        <tr>
-  `;
-
-  columnas.forEach(c => {
-    html += `<th>${c}</th>`;
-  });
-
-  html += `
-        </tr>
-      </thead>
-      <tbody>
-  `;
-
-  datos.forEach(row => {
-    html += `<tr>`;
-    columnas.forEach(c => {
-      html += `<td>${row[c]}</td>`;
-    });
-    html += `</tr>`;
-  });
-
-  html += `
-      </tbody>
-    </table>
-  `;
-
-  cont.innerHTML = html;
-}
-

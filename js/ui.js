@@ -107,33 +107,32 @@ function renderTabla(datos) {
   datos.forEach(row => {
 
     const cover = row.cover
-      ? `<img src="${row.cover}" class="spotify-cover">`
-      : `<div class="spotify-cover placeholder"></div>`;
+      ? `<img src="${row.cover}" class="card-cover">`
+      : `<div class="card-cover placeholder"></div>`;
 
     cont.innerHTML += `
-      <div class="spotify-card">
+      <div class="card">
 
-        <div class="spotify-left">
+        <!-- ZONA 3: duración arriba izquierda -->
+        <div class="card-duration">
+          ${row.duration ? convertirDuracion(row.duration) : ""}
+        </div>
+
+        <!-- ZONA 1: cover -->
+        <div class="card-left">
           ${cover}
         </div>
 
-        <div class="spotify-center">
-          <div class="spotify-title">
-            ${row.song || ""}
-            ${row.duration ? `<span class="spotify-duration">• ${convertirDuracion(row.duration)}</span>` : ""}
-
-          </div>
-
-          <div class="spotify-artist">
-            ${row.artist || ""}
-          </div>
-
-          <div class="spotify-album">
+        <!-- ZONA 2: datos -->
+        <div class="card-info">
+          <div class="card-title">${row.song || ""}</div>
+          <div class="card-artist">${row.artist || ""}</div>
+          <div class="card-album">
             ${row.album || ""} ${row.year ? `• ${row.year}` : ""}
           </div>
         </div>
 
-        <div class="spotify-right">
+        <div class="card-arrow">
           <i class="material-icons">chevron_right</i>
         </div>
 

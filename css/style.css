@@ -45,20 +45,20 @@ body {
   display: flex;
   align-items: center;
   background: #ffffff;
-  border-radius: 6px;
+  border-radius: 14px;
   padding: 8px 10px;
   margin-bottom: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.12);
 }
 
 .spotify-left {
-  margin-right: 12px;
+  margin-right: 2px;
 }
 
 .spotify-cover {
   width: 64px;
   height: 64px;
-  border-radius: 8px;
+  border-radius: 4px;
   object-fit: cover;
   background: #ddd;
 }
@@ -78,25 +78,25 @@ body {
 }
 
 .spotify-title {
-  font-size: 15x;
+  font-size: 14x;
   font-weight: 600;
   color: #111;
 }
 
 .spotify-duration {
-  font-size: 13px;
+  font-size: 12px;
   color: #666;
   margin-left: 6px;
 }
 
 .spotify-artist {
-  font-size: 13px;
+  font-size: 12px;
   color: #333;
   margin-top: 2px;
 }
 
 .spotify-album {
-  font-size: 12px;
+  font-size: 10px;
   color: #777;
   margin-top: 2px;
 }

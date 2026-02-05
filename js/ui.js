@@ -86,34 +86,36 @@ function renderTabla(datos) {
 
   datos.forEach(row => {
 
-    const img = COLUMNAS.imagen && row[COLUMNAS.imagen]
-      ? `<img src="${row[COLUMNAS.imagen]}" style="width:60px;height:60px;border-radius:8px;object-fit:cover;">`
-      : `<i class="material-icons" style="font-size:48px;color:#3f51b5;">album</i>`;
+    const cover = row.cover
+      ? `<img src="${row.cover}" class="spotify-cover">`
+      : `<div class="spotify-cover placeholder"></div>`;
 
     cont.innerHTML += `
-      <div class="list-item" style="display:flex; gap:12px;">
+      <div class="spotify-card">
 
-        <div>${img}</div>
-
-        <div style="display:flex; flex-direction:column;">
-
-          <span style="font-weight:600; font-size:16px;">
-            ${row[COLUMNAS.cancion] || ""}
-            ${COLUMNAS.duration && row[COLUMNAS.duration] ? `<span style="color:#666;font-size:14px;">— ${row[COLUMNAS.duration]}</span>` : ""}
-          </span>
-
-          <span style="color:#444; font-size:14px;">
-            ${row[COLUMNAS.artist] || ""}
-          </span>
-
-          ${COLUMNAS.album && row[COLUMNAS.album] ? `
-            <span style="color:#777; font-size:13px;">
-              ${row[COLUMNAS.album]}
-            </span>
-          ` : ""}
+        <div class="spotify-left">
+          ${cover}
         </div>
 
-        <i class="material-icons arrow">chevron_right</i>
+        <div class="spotify-center">
+          <div class="spotify-title">
+            ${row.song || ""}
+            ${row.duration ? `<span class="spotify-duration">• ${row.duration}</span>` : ""}
+          </div>
+
+          <div class="spotify-artist">
+            ${row.artist || ""}
+          </div>
+
+          <div class="spotify-album">
+            ${row.album || ""} ${row.year ? `• ${row.year}` : ""}
+          </div>
+        </div>
+
+        <div class="spotify-right">
+          <i class="material-icons">chevron_right</i>
+        </div>
+
       </div>
     `;
   });

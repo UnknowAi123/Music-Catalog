@@ -1,3 +1,14 @@
+
+// Aquí defines tú los nombres EXACTOS de las columnas del Excel
+const COLUMNAS = {
+  id: "id",
+  artista: "nombre",
+  cancion: "titulo",
+  album: "album",
+  duracion: "duracion",
+  imagen: null
+};
+
 let datosBrutos = [];
 let tiposColumnas = {};
 

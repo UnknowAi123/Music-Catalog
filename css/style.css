@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   background: #ffffff;
-  border-radius: 12px;
+  border-radius: 3px;
   padding: 6px 6px;        /* controla espacio general */
   margin-bottom: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.12);

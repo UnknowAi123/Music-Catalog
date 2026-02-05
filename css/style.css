@@ -1,73 +1,68 @@
-/* TARJETA BASE */
-.card {
+/* TARJETA DECK */
+.deck-card {
   position: relative;
-  display: flex;
-  align-items: center;
   background: #ffffff;
-  border-radius: 12px;
-  padding: 2px 6px;        /* controla espacio general */
-  margin-bottom: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.12);
+  border-radius: 14px;
+  padding: 12px;
+  margin-bottom: 16px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* separación entre zonas */
 }
 
-/* ZONA 3: duración arriba izquierda */
-.card-duration {
+/* ZONA 3: duración arriba */
+.deck-duration {
   position: absolute;
-  top: 6px;                 /* controla distancia al borde superior */
-  left: 6px;               /* controla distancia al borde izquierdo */
+  top: 10px;
+  left: 12px;
+  background: rgba(0,0,0,0.65);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 6px;
   font-size: 12px;
   font-weight: 600;
-  color: #444;
-  opacity: 0.85;
 }
 
-/* ZONA 1: cover */
-.card-left {
-  margin-right: 6px; /* controla espacio entre cover y texto */
+/* ZONA 1: cover grande */
+.deck-cover-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-}
-
-.card-cover {
-  width: 48px;              /* controla tamaño del cover */
-  height: 48px;
-  border-radius: 6px;
+.deck-cover {
+  width: 100%;
+  max-width: 260px; /* controla tamaño máximo */
+  border-radius: 10px;
   object-fit: cover;
+  aspect-ratio: 1 / 1; /* cuadrado perfecto */
   background: #ddd;
 }
 
-.card-cover.placeholder {
+.deck-cover.placeholder {
   background: #ccc;
 }
 
 /* ZONA 2: datos */
-.card-info {
+.deck-info {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  min-width: 0;
+  gap: 4px;
 }
 
-.card-title {
-  font-size: 13px;
-  font-weight: 480;
+.deck-title {
+  font-size: 18px;
+  font-weight: 700;
   color: #111;
-  line-height: 1.1;
 }
 
-.card-artist {
-  font-size: 12px;
+.deck-artist {
+  font-size: 15px;
   color: #333;
-  line-height: 1.1;
 }
 
-.card-album {
-  font-size: 12px;
+.deck-album {
+  font-size: 14px;
   color: #777;
-  line-height: 1.1;
-}
-
-/* Flecha */
-.card-arrow i {
-  color: #999;
 }

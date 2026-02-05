@@ -68,3 +68,70 @@
   color: #777;
   line-height: 1.1;
 }
+/* === TEMA OSCURO === */
+
+body {
+  background: #0f0f0f;
+  color: #e5e5e5;
+}
+
+/* Tarjeta */
+.deck-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 6px 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Duración arriba derecha */
+.deck-duration {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Cover */
+.deck-cover {
+  width: 42px;
+  height: 42px;
+  border-radius: 6px;
+  object-fit: cover;
+  background: #333;
+}
+
+.deck-cover.placeholder {
+  background: #444;
+}
+
+/* Textos */
+.deck-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.deck-artist {
+  font-size: 13px;
+  color: #ccc;
+}
+
+.deck-album {
+  font-size: 12px;
+  color: #999;
+}
+
+/* Año como etiqueta */
+.deck-album .year-tag {
+  color: #bbb;
+  font-weight: 600;
+}

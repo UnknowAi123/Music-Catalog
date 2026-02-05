@@ -42,14 +42,15 @@ function mostrarLista(columna) {
 
   datos.forEach(item => {
     cont.innerHTML += `
-      <div class="mdl-card mdl-shadow--2dp">
-        <div class="mdl-card__supporting-text">
-          ${item[columna]}
-        </div>
+      <div class="list-item">
+        <i class="material-icons">music_note</i>
+        <span>${item[columna]}</span>
+        <i class="material-icons arrow">chevron_right</i>
       </div>
     `;
   });
 }
+
 
 function mostrarStats(columna) {
   const stats = alasql(`

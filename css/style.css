@@ -82,7 +82,7 @@ body {
 }
 
 .spotify-title {
-  font-size: 13x;
+  font-size: 12x;
   font-weight: 600;
   color: #111;
 }
@@ -100,7 +100,7 @@ body {
 }
 
 .spotify-album {
-  font-size: 10px;
+  font-size: 12px;
   color: #777;
   margin-top: 2px;
 }

@@ -1,3 +1,23 @@
+
+function convertirDuracion(valor) {
+  if (!valor) return "";
+
+  // Si ya viene como texto tipo "3:30", lo dejamos
+  if (typeof valor === "string" && valor.includes(":")) return valor;
+
+  // Si viene como número decimal (Excel)
+  if (typeof valor === "number") {
+    const totalSegundos = Math.round(valor * 24 * 60 * 60);
+    const minutos = Math.floor(totalSegundos / 60);
+    const segundos = totalSegundos % 60;
+    return `${minutos}:${segundos.toString().padStart(2, "0")}`;
+  }
+
+  return valor;
+}
+
+
+
 function limpiarContenido() {
   document.getElementById("contenido-principal").innerHTML = "";
 }

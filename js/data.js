@@ -35,21 +35,32 @@ function detectarTipos(json) {
   for (const col in ejemplo) {
     const valor = ejemplo[col];
 
-    if (valor === null || valor === undefined) {
+    if (valor === null || valor === undefined || valor === "") {
       tipos[col] = "texto";
       continue;
     }
 
-    const num = Number(valor);
-    if (!isNaN(num) && valor !== "") {
+    // Detectar números reales (no strings numéricos raros)
+    if (typeof valor === "number") {
       tipos[col] = "numero";
-    } else if (!isNaN(Date.parse(valor))) {
-      tipos[col] = "fecha";
-    } else {
-      tipos[col] = "texto";
+      continue;
     }
+
+    // Detectar números escritos como texto
+    if (!isNaN(Number(valor)) && valor.trim() !== "") {
+      tipos[col] = "numero";
+      continue;
+    }
+
+    // Detectar fechas SOLO si tienen formato claro
+    if (/^\d{4}-\d{2}-\d{2}$/.test(valor) || /^\d{2}\/\d{2}\/\d{4}$/.test(valor)) {
+      tipos[col] = "fecha";
+      continue;
+    }
+
+    // Todo lo demás es texto
+    tipos[col] = "texto";
   }
 
   return tipos;
 }
-

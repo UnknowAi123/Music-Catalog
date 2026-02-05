@@ -99,11 +99,11 @@ function renderTabla(datos) {
 
           <span style="font-weight:600; font-size:16px;">
             ${row[COLUMNAS.cancion] || ""}
-            ${COLUMNAS.duracion && row[COLUMNAS.duracion] ? `<span style="color:#666;font-size:14px;">— ${row[COLUMNAS.duracion]}</span>` : ""}
+            ${COLUMNAS.duration && row[COLUMNAS.duration] ? `<span style="color:#666;font-size:14px;">— ${row[COLUMNAS.duration]}</span>` : ""}
           </span>
 
           <span style="color:#444; font-size:14px;">
-            ${row[COLUMNAS.artista] || ""}
+            ${row[COLUMNAS.artist] || ""}
           </span>
 
           ${COLUMNAS.album && row[COLUMNAS.album] ? `

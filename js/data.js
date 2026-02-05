@@ -2,10 +2,10 @@
 // Aquí defines tú los nombres EXACTOS de las columnas del Excel
 const COLUMNAS = {
   id: "id",
-  artista: "nombre",
+  artist: "nombre",
   cancion: "titulo",
   album: "album",
-  duracion: "duracion",
+  duration: "duracion",
   imagen: null
 };
 

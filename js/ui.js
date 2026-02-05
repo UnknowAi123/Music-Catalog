@@ -113,17 +113,17 @@ function renderTabla(datos) {
     cont.innerHTML += `
       <div class="deck-card">
 
-        <!-- ZONA 3: duración arriba -->
+        <!-- Duration arriba a la DERECHA -->
         <div class="deck-duration">
           ${row.duration ? convertirDuracion(row.duration) : ""}
         </div>
 
-        <!-- ZONA 1: cover grande -->
-        <div class="deck-cover-container">
+        <!-- Cover pequeño -->
+        <div class="deck-left">
           ${cover}
         </div>
 
-        <!-- ZONA 2: datos -->
+        <!-- Datos alineados a la derecha del cover -->
         <div class="deck-info">
           <div class="deck-title">${row.song || ""}</div>
           <div class="deck-artist">${row.artist || ""}</div>

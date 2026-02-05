@@ -5,7 +5,7 @@
   align-items: center;
   background: #ffffff;
   border-radius: 12px;
-  padding: 8px 10px;        /* controla espacio general */
+  padding: 2px 6px;        /* controla espacio general */
   margin-bottom: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.12);
 }
@@ -14,7 +14,7 @@
 .card-duration {
   position: absolute;
   top: 6px;                 /* controla distancia al borde superior */
-  left: 10px;               /* controla distancia al borde izquierdo */
+  left: 6px;               /* controla distancia al borde izquierdo */
   font-size: 12px;
   font-weight: 600;
   color: #444;
@@ -23,7 +23,7 @@
 
 /* ZONA 1: cover */
 .card-left {
-  margin-right: 10px;       /* controla espacio entre cover y texto */
+  margin-right: 6px;       /* controla espacio entre cover y texto */
 }
 
 .card-cover {
@@ -47,14 +47,14 @@
 }
 
 .card-title {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 480;
   color: #111;
   line-height: 1.1;
 }
 
 .card-artist {
-  font-size: 13px;
+  font-size: 12px;
   color: #333;
   line-height: 1.1;
 }

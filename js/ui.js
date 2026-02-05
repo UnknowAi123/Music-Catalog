@@ -2,10 +2,19 @@
 function convertirDuracion(valor) {
   if (!valor) return "";
 
-  // Si ya viene como texto tipo "3:30", lo dejamos
-  if (typeof valor === "string" && valor.includes(":")) return valor;
+  // Si ya viene como texto tipo "3:30"
+  if (typeof valor === "string" && valor.includes(":")) {
+    return valor;
+  }
 
-  // Si viene como número decimal (Excel)
+  // Si viene como número entero grande → interpretarlo como minutos
+  if (typeof valor === "number" && valor > 10) {
+    const minutos = Math.floor(valor);
+    const segundos = Math.round((valor - minutos) * 60);
+    return `${minutos}:${segundos.toString().padStart(2, "0")}`;
+  }
+
+  // Si viene como número decimal Excel (fracción del día)
   if (typeof valor === "number") {
     const totalSegundos = Math.round(valor * 24 * 60 * 60);
     const minutos = Math.floor(totalSegundos / 60);
@@ -15,6 +24,7 @@ function convertirDuracion(valor) {
 
   return valor;
 }
+
 
 
 

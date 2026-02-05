@@ -1,118 +1,71 @@
-.page-content {
-  padding: 2px 2px;
-}
-
-.mdl-card {
-  width: 100%;
-  margin-bottom: 16px;
-}
-body {
-  background: #f5f5f5;
-  font-family: 'Roboto', sans-serif;
-}
-
-.card-item {
-  margin-bottom: 12px;
-  border-radius: 12px;
-}
-
-.mdl-card__supporting-text {
-  font-size: 16px;
-  line-height: 1.4;
-}
-
-.list-item {
-  display: flex;
-  align-items: center;
-  padding: 12px;
-  background: white;
-  border-radius: 12px;
-  margin-bottom: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.list-item i {
-  margin-right: 12px;
-  color: #3f51b5;
-}
-
-.list-item .arrow {
-  margin-left: auto;
-  color: #999;
-}
-
-.spotify-card {
+/* TARJETA BASE */
+.card {
+  position: relative;
   display: flex;
   align-items: center;
   background: #ffffff;
-  border-radius: 14px;
-  padding: 4px 6px;
-  margin-bottom: 4px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  border-radius: 12px;
+  padding: 8px 10px;        /* controla espacio general */
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.12);
 }
 
-.spotify-left {
-  margin-right: 6px;
+/* ZONA 3: duración arriba izquierda */
+.card-duration {
+  position: absolute;
+  top: 6px;                 /* controla distancia al borde superior */
+  left: 10px;               /* controla distancia al borde izquierdo */
+  font-size: 12px;
+  font-weight: 600;
+  color: #444;
+  opacity: 0.85;
 }
 
-.spotify-cover {
-  width: 64px;
-  height: 64px;
-  border-radius: 8px;
+/* ZONA 1: cover */
+.card-left {
+  margin-right: 10px;       /* controla espacio entre cover y texto */
+}
+
+.card-cover {
+  width: 48px;              /* controla tamaño del cover */
+  height: 48px;
+  border-radius: 6px;
   object-fit: cover;
   background: #ddd;
-  margin-top: 2;
-  margin-bottom: 2;
 }
 
-}
-
-.spotify-cover.placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.card-cover.placeholder {
   background: #ccc;
 }
 
-.spotify-center {
+/* ZONA 2: datos */
+.card-info {
   display: flex;
   flex-direction: column;
   flex: 1;
   min-width: 0;
 }
 
-.spotify-title {
-  font-size: 12x;
-  font-weight: 300;
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
   color: #111;
+  line-height: 1.1;
 }
 
-.spotify-duration {
-  font-size: 12px;
-  color: #666;
-  margin-left: 6px;
-}
-
-.spotify-artist {
-  font-size: 12px;
+.card-artist {
+  font-size: 13px;
   color: #333;
-  margin-top: 2px;
+  line-height: 1.1;
 }
 
-.spotify-album {
+.card-album {
   font-size: 12px;
   color: #777;
-  margin-top: 2px;
+  line-height: 1.1;
 }
 
-.spotify-right i {
+/* Flecha */
+.card-arrow i {
   color: #999;
 }
-
-.spotify-title,
-.spotify-artist,
-.spotify-album {
-  white-space: normal;
-  word-break: break-word;
-}
-

@@ -29,9 +29,9 @@
 }
 
 .deck-cover {
-  width: 48px;              /* cover más pequeño */
-  height: 48x;
-  border-radius: 6px;
+  width: 64px;              /* cover más pequeño */
+  height: 64px;
+  border-radius: 3px;
   object-fit: cover;
   background: #ddd;
 }

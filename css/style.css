@@ -78,8 +78,8 @@ body {
 /* Tarjeta */
 .deck-card {
   background: #1a1a1a;
-  border-radius: 6px;
-  padding: 6px 10px;
+  border-radius: 3px;
+  padding: 6px 6px;
   margin-bottom: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.6);
   display: flex;
@@ -115,7 +115,7 @@ body {
 
 /* Textos */
 .deck-title {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   color: #fff;
 }

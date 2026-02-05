@@ -85,10 +85,22 @@ function renderTabla(datos) {
   limpiarContenido();
   const cont = document.getElementById("contenido-principal");
 
-  if (!datos.length) {
-    cont.innerHTML = "<p>No hay datos.</p>";
-    return;
-  }
+  datos.forEach(row => {
+    let contenido = "";
+    for (const col in row) {
+      contenido += `<strong>${col}:</strong> ${row[col]}<br>`;
+    }
+
+    cont.innerHTML += `
+      <div class="mdl-card mdl-shadow--2dp card-item">
+        <div class="mdl-card__supporting-text">
+          ${contenido}
+        </div>
+      </div>
+    `;
+  });
+}
+
 
   const columnas = Object.keys(datos[0]);
 

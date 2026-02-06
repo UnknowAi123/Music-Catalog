@@ -72,12 +72,12 @@ body {
 
 /* Tercera línea: album artist - album */
 .line3 {
-  font-size: 12px;
+  font-size: 10px;
   color: #7aa9a3;
 }
 
 /* Cuarta línea: año / género */
 .line4 {
-  font-size: 12px;
+  font-size: 10px;
   color: #7aa9a3;
 }

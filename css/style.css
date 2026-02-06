@@ -1,27 +1,49 @@
-.deck-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 12px;
+/* === TEMA OSCURO SUAVE + ACENTO TURQUESA-VERDE === */
+
+body {
   background: #1a1a1a;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  color: #e6f7f5;
 }
 
+#contenido-principal {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* ============================================================
+   TARJETA DETALLADA (NUEVA)
+   ============================================================ */
+
+.deck-card {
+  background: #103536;
+  border-radius: 0px;
+  padding: 8px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.55);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+}
+
+/* Cover */
 .cover {
   width: 64px;
   height: 64px;
-  border-radius: 4px;
+  border-radius: 0px;
   object-fit: cover;
+  background: #3a3d3e;
 }
 
+/* Info */
 .info {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
 }
 
+/* Primera línea: título + duración */
 .line1 {
   display: flex;
   justify-content: space-between;
@@ -29,18 +51,33 @@
 }
 
 .title {
-  font-weight: 600;
   font-size: 15px;
+  font-weight: 600;
+  color: #e6f7f5;
 }
 
 .duration {
-  opacity: 0.7;
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  background: rgba(45, 212, 191, 0.15);
+  color: #2dd4bf;
+  padding: 2px 6px;
 }
 
-.line2,
-.line3,
+/* Segunda línea: artista */
+.line2 {
+  font-size: 13px;
+  color: #9adcd3;
+}
+
+/* Tercera línea: album artist - album */
+.line3 {
+  font-size: 12px;
+  color: #7aa9a3;
+}
+
+/* Cuarta línea: año / género */
 .line4 {
-  font-size: 14px;
-  opacity: 0.85;
+  font-size: 12px;
+  color: #7aa9a3;
 }

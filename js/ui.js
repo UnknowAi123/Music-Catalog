@@ -1,20 +1,16 @@
-
 function convertirDuracion(valor) {
   if (!valor) return "";
 
-  // Si ya viene como texto tipo "3:30"
   if (typeof valor === "string" && valor.includes(":")) {
     return valor;
   }
 
-  // Si viene como número entero grande → interpretarlo como minutos
   if (typeof valor === "number" && valor > 10) {
     const minutos = Math.floor(valor);
     const segundos = Math.round((valor - minutos) * 60);
     return `${minutos}:${segundos.toString().padStart(2, "0")}`;
   }
 
-  // Si viene como número decimal Excel (fracción del día)
   if (typeof valor === "number") {
     const totalSegundos = Math.round(valor * 24 * 60 * 60);
     const minutos = Math.floor(totalSegundos / 60);
@@ -25,9 +21,6 @@ function convertirDuracion(valor) {
   return valor;
 }
 
-
-
-
 function limpiarContenido() {
   document.getElementById("contenido-principal").innerHTML = "";
 }
@@ -36,7 +29,6 @@ function generarVistasIniciales() {
   const menu = document.getElementById("menu-vistas");
   menu.innerHTML = "";
 
-  // Crear una vista por cada columna
   for (const col in tiposColumnas) {
     const tipo = tiposColumnas[col];
 
@@ -47,7 +39,6 @@ function generarVistasIniciales() {
     `;
   }
 
-  // Vista principal: tarjetas con todos los datos
   mostrarTablaCompleta();
 }
 
@@ -110,43 +101,49 @@ function mostrarStats(columna) {
   `;
 }
 
+/* ============================================================
+   TARJETA DETALLADA (NUEVA) — RESPETA TU ESTILO ORIGINAL
+   ============================================================ */
+
 function renderTabla(datos) {
   limpiarContenido();
   const cont = document.getElementById("contenido-principal");
 
   datos.forEach(row => {
 
-    const cover = row.cover
-      ? `<img src="${row.cover}" class="deck-cover">`
-      : `<div class="deck-cover placeholder"></div>`;
-
     cont.innerHTML += `
       <div class="deck-card">
 
-        <!-- Duration arriba a la DERECHA -->
-        <div class="deck-duration">
-          ${row.duration ? convertirDuracion(row.duration) : ""}
-        </div>
+        <img class="cover" src="${row['Album Cover'] || ''}">
 
-        <!-- Cover pequeño -->
-        <div class="deck-left">
-          ${cover}
-        </div>
+        <div class="info">
 
-        <!-- Datos alineados a la derecha del cover -->
-        <div class="deck-info">
-          <div class="deck-title">${row.song || ""}</div>
-          <div class="deck-artist">${row.artist || ""}</div>
-          <div class="deck-album">
-           ${row.year ? `| ${row.year} | ` : ""}${row.album || ""}
-
+          <div class="line1">
+            <span class="title">${row['Track Name'] || ""}</span>
+            <span class="duration">${convertirDuracion(row['Track Duration']) || ""}</span>
           </div>
+
+          <div class="line2">${row['Track Artist'] || ""}</div>
+
+          <div class="line3">
+            ${row['Album Artist'] || ""} - ${row['Track Album'] || ""}
+          </div>
+
+          <div class="line4">
+            ${row['Album Year'] || ""} / ${row['Track Genre'] || ""}
+          </div>
+
         </div>
 
       </div>
     `;
   });
 }
+
+/* ============================================================
+   BUSCADOR — ACTUALIZADO A TUS NUEVAS COLUMNAS
+   ============================================================ */
+
 document.getElementById("buscador").addEventListener("input", function () {
     const q = this.value.toLowerCase().trim();
 

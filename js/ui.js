@@ -147,3 +147,28 @@ function renderTabla(datos) {
     `;
   });
 }
+
+// === BUSCADOR ===
+document.getElementById("buscador").addEventListener("input", function () {
+    const q = this.value.toLowerCase().trim();
+
+    if (!window.DATA_ORIGINAL) {
+        window.DATA_ORIGINAL = window.DATA; // guardamos copia original
+    }
+
+    if (q === "") {
+        renderTabla(window.DATA_ORIGINAL);
+        return;
+    }
+
+    const filtrado = window.DATA_ORIGINAL.filter(row =>
+        (row.song || "").toLowerCase().includes(q) ||
+        (row.artist || "").toLowerCase().includes(q) ||
+        (row.album || "").toLowerCase().includes(q) ||
+        (row.year || "").toString().includes(q)
+    );
+
+    renderTabla(filtrado);
+});
+
+      

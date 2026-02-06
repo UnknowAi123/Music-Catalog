@@ -210,3 +210,8 @@ body {
   color: #2dd4bf; /* acento turquesa */
   font-weight: 600;
 }
+
+#contenido-principal {
+  padding-left: 12px;
+  padding-right: 12px;
+}

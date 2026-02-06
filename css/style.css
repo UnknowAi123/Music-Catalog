@@ -142,13 +142,13 @@ body {
 /* === TEMA OSCURO SUAVE + ACENTO TURQUESA-VERDE === */
 
 body {
-  background: #121516;      /* oscuro suave, no negro */
+  background: #1a1a1a;      /* oscuro suave, no negro */
   color: #e6f7f5;           /* texto claro ligeramente verdoso */
 }
 
 /* Tarjeta */
 .deck-card {
-  background: #1c1f20;      /* gris carbón suave */
+  background: #103536;      /* gris carbón suave */
   border-radius: 0px;       /* mantengo tus bordes rectos */
   padding: 6px 6px;
   margin-bottom: 6px;
@@ -178,7 +178,7 @@ body {
   height: 64px;
   border-radius: 0px;
   object-fit: cover;
-  background: #2a2d2e; /* gris oscuro neutro */
+  background: #103536; /* gris oscuro neutro */
 }
 
 .deck-cover.placeholder {

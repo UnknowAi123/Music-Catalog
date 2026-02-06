@@ -156,7 +156,7 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
-  border-left: 3px solid #2dd4bf; /* ACENTO TURQUESA VERDE */
+  border-left: 0px solid #2dd4bf; /* ACENTO TURQUESA VERDE */
 }
 
 /* Duración arriba derecha */

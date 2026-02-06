@@ -80,7 +80,7 @@ body {
   background: #1a1a1a;
   border-radius: 0px;
   padding: 6px 6px;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.6);
   display: flex;
   align-items: center;
@@ -91,7 +91,7 @@ body {
 .deck-duration {
   position: absolute;
   top: 6px;
-  right: 10px;
+  right: 6px;
   background: rgba(255,255,255,0.12);
   color: #fff;
   padding: 2px 6px;

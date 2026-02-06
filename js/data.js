@@ -35,6 +35,8 @@ function procesarDatos(json) {
 
   tiposColumnas = detectarTipos(json);
 
+window.DATA = json;
+  
   generarVistasIniciales();
 }
 

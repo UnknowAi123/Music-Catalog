@@ -196,13 +196,13 @@ body {
 .deck-artist {
   font-size: 13px;
   color: #9adcd3; /* turquesa apagado */
-  line-height: 2.6;
+  line-height: 2;
 }
 
 .deck-album {
   font-size: 12px;
   color: #7aa9a3; /* gris verdoso */
-  line-height: 1.2;
+  line-height: 1.6;
 }
 
 /* Año como etiqueta */

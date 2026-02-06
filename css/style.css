@@ -202,7 +202,7 @@ body {
 .deck-album {
   font-size: 12px;
   color: #7aa9a3; /* gris verdoso */
-  line-height: 1.6;
+  line-height: 1.1;
 }
 
 /* Año como etiqueta */
@@ -212,6 +212,6 @@ body {
 }
 
 #contenido-principal {
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
 }

@@ -147,12 +147,11 @@ function renderTabla(datos) {
     `;
   });
 }
-// === BUSCADOR ===
 document.getElementById("buscador").addEventListener("input", function () {
     const q = this.value.toLowerCase().trim();
 
     if (!window.DATA_ORIGINAL) {
-        window.DATA_ORIGINAL = window.DATA; // guardamos copia original
+        window.DATA_ORIGINAL = window.DATA;
     }
 
     if (q === "") {
@@ -161,13 +160,13 @@ document.getElementById("buscador").addEventListener("input", function () {
     }
 
     const filtrado = window.DATA_ORIGINAL.filter(row =>
-        (row.song || "").toLowerCase().includes(q) ||
-        (row.artist || "").toLowerCase().includes(q) ||
-        (row.album || "").toLowerCase().includes(q) ||
-        (row.year || "").toString().includes(q)
+        (row['Track Name'] || "").toLowerCase().includes(q) ||
+        (row['Track Artist'] || "").toLowerCase().includes(q) ||
+        (row['Track Album'] || "").toLowerCase().includes(q) ||
+        (row['Album Artist'] || "").toLowerCase().includes(q) ||
+        (row['Track Genre'] || "").toLowerCase().includes(q) ||
+        (row['Album Year'] || "").toString().includes(q)
     );
 
     renderTabla(filtrado);
 });
-
-      

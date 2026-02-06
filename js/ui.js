@@ -147,7 +147,6 @@ function renderTabla(datos) {
     `;
   });
 }
-
 // === BUSCADOR ===
 document.getElementById("buscador").addEventListener("input", function () {
     const q = this.value.toLowerCase().trim();

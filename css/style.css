@@ -138,3 +138,75 @@ body {
   color: #bbb;
   font-weight: 600;
 }
+
+/* === TEMA OSCURO SUAVE + ACENTO TURQUESA-VERDE === */
+
+body {
+  background: #121516;      /* oscuro suave, no negro */
+  color: #e6f7f5;           /* texto claro ligeramente verdoso */
+}
+
+/* Tarjeta */
+.deck-card {
+  background: #1c1f20;      /* gris carbón suave */
+  border-radius: 0px;       /* mantengo tus bordes rectos */
+  padding: 6px 6px;
+  margin-bottom: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-left: 3px solid #2dd4bf; /* ACENTO TURQUESA VERDE */
+}
+
+/* Duración arriba derecha */
+.deck-duration {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: rgba(45, 212, 191, 0.15); /* turquesa suave */
+  color: #2dd4bf;                       /* turquesa brillante */
+  padding: 2px 6px;
+  border-radius: 0px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Cover */
+.deck-cover {
+  width: 64px;
+  height: 64px;
+  border-radius: 0px;
+  object-fit: cover;
+  background: #2a2d2e; /* gris oscuro neutro */
+}
+
+.deck-cover.placeholder {
+  background: #3a3d3e;
+}
+
+/* Textos */
+.deck-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e6f7f5; /* blanco verdoso */
+  line-height: 1.6;
+}
+
+.deck-artist {
+  font-size: 13px;
+  color: #9adcd3; /* turquesa apagado */
+  line-height: 1.6;
+}
+
+.deck-album {
+  font-size: 12px;
+  color: #7aa9a3; /* gris verdoso */
+  line-height: 1.6;
+}
+
+/* Año como etiqueta */
+.deck-album .year-tag {
+  color: #2dd4bf; /* acento turquesa */
+  font-weight: 600;
+}

@@ -190,13 +190,13 @@ body {
   font-size: 14px;
   font-weight: 600;
   color: #e6f7f5; /* blanco verdoso */
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .deck-artist {
   font-size: 13px;
   color: #9adcd3; /* turquesa apagado */
-  line-height: 1.2;
+  line-height: 2;
 }
 
 .deck-album {

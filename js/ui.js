@@ -110,34 +110,30 @@ function renderTabla(datos) {
   const cont = document.getElementById("contenido-principal");
 
   datos.forEach(row => {
-
     cont.innerHTML += `
       <div class="deck-card">
-
         <img class="cover" src="${row['Album Cover'] || ''}">
-
         <div class="info">
-
           <div class="line1">
             <span class="title">${row['Track Name'] || ""}</span>
             <span class="duration">${convertirDuracion(row['Track Duration']) || ""}</span>
           </div>
-
           <div class="line2">${row['Track Artist'] || ""}</div>
-
           <div class="line3">
-          ${row['Album Year'] || ""} / ${row['Track Album'] || ""}
+            ${row['Album Artist'] || ""} - ${row['Track Album'] || ""}
           </div>
-
-            
+          <div class="line4">
+            ${row['Album Year'] || ""} / ${row['Track Genre'] || ""}
           </div>
-
         </div>
-
       </div>
     `;
   });
+
+  // 🔥 Esto fuerza a MDL a recalcular alturas y alineaciones
+  componentHandler.upgradeDom();
 }
+
 
 /* ============================================================
    BUSCADOR — ACTUALIZADO A TUS NUEVAS COLUMNAS

@@ -16,7 +16,7 @@ body {
 
 .deck-card {
   background: #103536;
-  border-radius: 4px;
+  border-radius: 6px;
   padding: 8px;
   margin-bottom: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.55);
@@ -30,7 +30,7 @@ body {
 .cover {
   width: 64px;
   height: 64px;
-  border-radius: 2px;
+  border-radius: 3px;
   object-fit: cover;
   background: #3a3d3e;
 }
@@ -62,7 +62,7 @@ body {
   background: rgba(45, 212, 191, 0.15);
   color: #2dd4bf;
   padding: 2px 6px;
-  border-radius: 2px;
+  border-radius: 3px;
   
 }
 

@@ -120,10 +120,8 @@ function renderTabla(datos) {
           </div>
           <div class="line2">${row['Track Artist'] || ""}</div>
           <div class="line3">
-            ${row['Album Artist'] || ""} - ${row['Track Album'] || ""}
-          </div>
-          <div class="line4">
-            ${row['Album Year'] || ""} / ${row['Track Genre'] || ""}
+            ${row['Track Album'] || ""}
+
           </div>
         </div>
       </div>
